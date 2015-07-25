@@ -1,0 +1,30 @@
+{
+    "name":"gumaz/slim-base-mvc-json",
+    "type":"framework",
+    "description":"Base setup for Slim MVC with JSON response, Eloquent ORM and Twig PHP template engine.",
+    "keywords":["slim", "framework", "mvc", "eloquent", "twig", "json"],
+    "homepage":"https://github.com/gumaz/slim-base-mvc-json",
+    "license":"MIT",
+    "authors": [
+        {
+            "name": "Giulio Mazzeo",
+            "email": "gumaz.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.*",
+        "illuminate/database": "5.0.*",
+        "slim/views": "0.1.*",
+        "twig/twig": "1.*"
+    },
+    "autoload":{
+        "psr-4": {
+            "": "include",
+            "Controller\\": "app/controllers",
+            "Model\\": "app/models"
+        },
+        "files": [
+            "app/database/config.php"
+        ]
+    }
+}
